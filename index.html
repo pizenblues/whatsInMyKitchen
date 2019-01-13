@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.0.5/vue.min.js"></script>
+    <title>Getting started with vue.js</title>
+</head>
+<body>
+    <h1>
+        Whats in your fridge?
+    </h1>
+    <div id="app" style="display: flex">
+        <div style="background: lightblue; margin-right: 1rem; width: 30%">
+            <h2>Ingridients</h2>
+            <div v-for="ingridient in ingridients" class="form-group">
+                <input type="checkbox" id="{{ingridient.name}}">
+                <label for="{{ingridient.name}}">
+                    {{ ingridient.name }}
+                </label>
+            </div>
+        </div>
+        <div style="width: 70%">
+            <h2>Receta</h2>
+            <div class="receta">
+                <strong>titulo</strong>
+                <p>
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                    Consequatur ipsum eaque sed ad sit amet assumenda
+                    perspiciatis laudantium iure esse? Harum consequuntur
+                    tempora, necessitatibus laboriosam dolorem aut
+                    eligendi cumque ea?
+                </p>
+                <hr>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="main.js"></script>
+</html>
